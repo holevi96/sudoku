@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1487193336 source:c:\users\holevi96\desktop\graphicsproject16\graphicsproject\main.cpp
+	"graphics.hpp"
+
+1430018866 c:\users\holevi96\desktop\graphicsproject16\graphicsproject\include\graphics.hpp
+	<string>
+
+1493846401 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\main.cpp
+	"graphics.hpp"
+	"vector"
+	"iostream"
+
+1430022466 c:\users\holevi96\documents\ppke\prog 2\sudoku\include\graphics.hpp
+	<string>
+
