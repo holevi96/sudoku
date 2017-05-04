@@ -13,3 +13,107 @@
 1430022466 c:\users\holevi96\documents\ppke\prog 2\sudoku\include\graphics.hpp
 	<string>
 
+1493717048 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\button.cpp
+
+1493717048 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\dropdownfield.cpp
+	<sstream>
+	"formWidget.hpp"
+	"dropdownField.hpp"
+	"graphics.hpp"
+	<vector>
+	<iostream>
+
+1493717048 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\formwidget.hpp
+	"graphics.hpp"
+	"window.hpp"
+
+1430022466 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\include\graphics.hpp
+	<string>
+
+1493717049 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.hpp
+	"formWidget.hpp"
+	<vector>
+
+1493717048 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\dropdownfield.hpp
+	"formWidget.hpp"
+	<vector>
+
+1493720183 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\examplecheckbox.cpp
+	"examplecheckbox.hpp"
+	"graphics.hpp"
+
+1493720304 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\examplecheckbox.hpp
+	"graphics.hpp"
+	"formWidget.hpp"
+
+1493717048 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\formwidget.cpp
+	"graphics.hpp"
+	"formWidget.hpp"
+	"iostream"
+
+1493892510 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\main.cpp
+	"graphics.hpp"
+	"vector"
+	"iostream"
+	"fstream"
+	"sudokuGame.hpp"
+
+1493892572 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokugame.hpp
+	"vector"
+
+1493720075 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
+	"myWindow.hpp"
+	"formWidget.hpp"
+	"pushButton.hpp"
+	"numberField.hpp"
+	"dropdownField.hpp"
+	"textField.hpp"
+	"iostream"
+	"vector"
+
+1493717049 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.hpp
+	"formWidget.hpp"
+	"window.hpp"
+
+1493717049 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\pushbutton.hpp
+	"formWidget.hpp"
+	"window.hpp"
+
+1493717049 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\numberfield.hpp
+	"formWidget.hpp"
+	"window.hpp"
+
+1493717049 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\textfield.hpp
+	"formWidget.hpp"
+
+1493717049 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\numberfield.cpp
+	<sstream>
+	"formWidget.hpp"
+	"numberField.hpp"
+	"window.hpp"
+	"graphics.hpp"
+	<cstdlib>
+	<iostream>
+
+1493717049 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\pushbutton.cpp
+	"pushButton.hpp"
+	"formWidget.hpp"
+	"window.hpp"
+	"graphics.hpp"
+
+1493892569 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokugame.cpp
+	"sudokuGame.hpp"
+	"fstream"
+	"iostream"
+
+1493720075 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\textfield.cpp
+	"formWidget.hpp"
+	"graphics.hpp"
+	"textField.hpp"
+
+1493720075 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.cpp
+	"formWidget.hpp"
+	"window.hpp"
+	"graphics.hpp"
+	"fstream"
+

@@ -14,7 +14,8 @@ int main()
     gout.open(WIDTH,HEIGHT); // pixelben adja meg h mekkora.
     event ev;
     sudokuGame S;
-
+    S.sudoku[0][8] = 5;
+    S.onChange(0,8);
     while(gin >> ev) {
 
     }

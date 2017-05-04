@@ -1,5 +1,6 @@
 #include "sudokuGame.hpp"
 #include "fstream"
+#include  "iostream"
 sudokuGame::sudokuGame(){
     ifstream sfile("sudoku1.txt");
     sudoku.resize(9);
@@ -37,4 +38,19 @@ bool sudokuGame::isValidInRow(int x,int y) const{
         if(i!=x && sudoku[i][y] == elem) valid = false;
     }
     return valid;
+}
+bool sudokuGame::onChange(int x, int y){
+    int elem = sudoku[x][y];
+    if(elem != 0){
+        if(isValidInColumn(x,y)&&isValidInRow(x,y)&&isValidInSub(x,y)){
+            cout<<"Valid";
+            return true;
+        }else{
+            cout<<"Invalid";
+            return false;
+        }
+    }else{
+        return true;
+    }
+
 }

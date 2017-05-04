@@ -5,13 +5,14 @@ using namespace std;
 
 class sudokuGame{
     protected:
-    vector< vector<int> > sudoku;
+
     public:
+        vector< vector<int> > sudoku;
     sudokuGame();
     bool isValidInSub(int x, int y) const;
     bool isValidInRow(int x, int y) const;
     bool isValidInColumn(int x, int y) const;
-    void onChange(int x, int y);
+    bool onChange(int x, int y);
     void drawTable();
 };
 
