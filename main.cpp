@@ -3,22 +3,19 @@
 #include "iostream"
 #include "fstream"
 #include "sudokuGame.hpp"
+#include "myWindow.hpp"
 using namespace genv;
 using namespace std;
 
 int main()
 {
 
-    const int WIDTH = 400;
-    const int HEIGHT = 400;
-    gout.open(WIDTH,HEIGHT); // pixelben adja meg h mekkora.
-    event ev;
+   myWindow App(1000,1000);
+
     sudokuGame S;
     S.sudoku[0][8] = 5;
     S.onChange(0,8);
-    while(gin >> ev) {
 
-    }
 
     return 0;
 }
