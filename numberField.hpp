@@ -8,11 +8,11 @@ protected:
     int minimum,maximum;
     public:
     numberField(Window* w,int px,int py, int sx, int sy, int minimum ,int maximum, int value);
-    void changeValue(int n);
+    virtual void changeValue(int n);
     virtual void handle(genv::event ev);
     virtual void draw() const;
-    bool isUpClicked(int x, int y,int sx,int sy) const;
-    bool isDownClicked(int x, int y,int sx,int sy) const;
+    virtual bool isUpClicked(int x, int y,int sx,int sy) const;
+    virtual bool isDownClicked(int x, int y,int sx,int sy) const;
     virtual bool isWidgetMouseOver(genv::event ev);
 };
 #endif // NUMBERFIELD_HPP_INCLUDED
