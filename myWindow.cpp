@@ -2,6 +2,7 @@
 #include "formWidget.hpp"
 #include "pushButton.hpp"
 #include "numberField.hpp"
+#include "sudokuNumberField.hpp"
 #include "dropdownField.hpp"
 #include "textField.hpp"
 #include "iostream"
@@ -13,7 +14,7 @@ myWindow::myWindow(int xx, int yy){
 
     for(int s=0;s<9;s++){
         for(int o=0;o<9;o++){
-            numberField *n = new numberField(this,s*70,o*70,70,70,0,9,0);
+            sudokuNumberField *n = new sudokuNumberField(this,s*70,o*70,70,70,0,9,0);
             widgets.push_back(n);
         }
     }

@@ -10,9 +10,9 @@ void Window::event_loop(){
 
     while(gin >> ev ) {
 
-        if (ev.type == ev_mouse && ev.button==btn_left) {
+        if (ev.type == ev_mouse) {
             for (size_t i=0;i<widgets.size();i++) {
-                if (widgets[i]->isWidgetMouseOver(ev)) {
+                if (widgets[i]->isMouseOverWidget(ev)) {
                         focus = i;
                 }
             }

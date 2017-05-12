@@ -15,15 +15,15 @@ dropDownField::dropDownField(Window *w,int px,int py, int sx, int sy, vector<str
     }*/
     if(op.size() == 0){
         isEmpty = true;
-        currentValue = "No entries.";
+       // currentValue = "No entries.";
     }else{
-        currentValue = op[0];
+        //currentValue = op[0];
         for(auto e : op){
             addOption(e);
         }
     }
 
-    cout<<options.size()<<endl;
+   // cout<<options.size()<<endl;
 }
 
 
@@ -31,7 +31,7 @@ void dropDownField::addOption(string o){
     options.push_back(o);
     isEmpty = false;
     scrollerSize = (_sy*maxOptions-60)*((double)maxOptions/options.size());
-    currentValue = o;
+    //currentValue = o;
     activeOptionIndex = options.size()-1;
 
 
@@ -40,10 +40,10 @@ void dropDownField::removeSelected(){
     options.erase(options.begin() + activeOptionIndex);
     if(options.size() != 0){
             activeOptionIndex = 0;
-        currentValue = options[0];
+       // currentValue = options[0];
     }else{
         isEmpty = true;
-        currentValue = "No entries.";
+        //currentValue = "No entries.";
     }
 }
 
@@ -73,7 +73,7 @@ void dropDownField::handle(genv::event ev){
 
         if(isElementClicked(mx,my)){
             activeOptionIndex = elementIndex(my);
-            currentValue = options[activeOptionIndex];
+            //currentValue = options[activeOptionIndex];
             isOpened = false;
             isActive = false;
         }
@@ -106,7 +106,13 @@ void dropDownField::draw() const
 
     c<<color(255,255,255);
     c<<move_to(0,0)<<box(_sx,_sy)<<move_to(2,2)<<color(0,0,0)<<box(_sx-4,_sy-4);
-    c<<move_to(15,15)<<color(255,255,255)<<text(currentValue);
+    string currentText;
+    if(options.size()>0){
+        currentText = options[activeOptionIndex];
+    }else{
+        currentText = "No entries.";
+    }
+    c<<move_to(15,15)<<color(255,255,255)<<text(currentText);
     //a lenyitó nyilacska kirajzolása
     c<<move_to(_sx-30,0)<<color(255,255,255)<<box(30,_sy);
     c<<move_to(_sx-26,(_sy/2-5))<<color(0,0,0)<<line(11,11)<<line(11,-11);
@@ -154,7 +160,7 @@ void dropDownField::draw() const
     gout << stamp(c, _px, _py);
 }
 
-bool dropDownField::isWidgetMouseOver(genv::event ev){
+bool dropDownField::isMouseOverWidget(genv::event ev){
      bool felt;
 if(isOpened){
     felt = ev.pos_x >= _px && ev.pos_x <= _px+_sx && ev.pos_y > _py && ev.pos_y <= _py+_sy*(maxOptions+1);
@@ -169,4 +175,8 @@ if(isOpened){
         isOpened = false;
         return false;
     }
+}
+
+string dropDownField::getSelectedOption() const{
+    return options[activeOptionIndex];
 }

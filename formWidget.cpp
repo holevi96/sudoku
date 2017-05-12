@@ -2,7 +2,7 @@
 #include "formWidget.hpp"
 #include "iostream"
 using namespace std;
-
+using namespace genv;
 
 
 formWidget::formWidget(Window* w,int px,int py, int sx, int sy):
@@ -10,8 +10,22 @@ formWidget::formWidget(Window* w,int px,int py, int sx, int sy):
 {
     parent = w;
     isActive = false;
+    isHovered = false;
 }
 
-string formWidget::getValue() {
-    return currentValue;
+bool formWidget::isMouseOverWidget(genv::event ev){
+    bool active = false;
+    if(ev.pos_x >= _px && ev.pos_x <= _px+_sx && ev.pos_y > _py && ev.pos_y <= _py+_sy){
+        active = true;
+    }else{
+        active = false;
+    }
+    if(ev.button == btn_left){
+        isActive = active;
+        return isActive;
+    }
+    if(ev.type = ev_mouse){
+        isHovered = active;
+    }
+
 }

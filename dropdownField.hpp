@@ -20,9 +20,10 @@ protected:
     bool isScrollBarUpClicked(int x, int y) const;
     bool isScrollBarDownClicked(int x, int y) const;
     bool isElementClicked(int x,int y) const;
-    virtual bool isWidgetMouseOver(genv::event ev);
+    virtual bool isMouseOverWidget(genv::event ev);
     int elementIndex(int y) const;
     void scroll(int n);
+    string getSelectedOption() const;
 };
 
 

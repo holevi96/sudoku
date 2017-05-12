@@ -7,8 +7,8 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin\Debug\GraphicsProject" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Debug\" />
+				<Option output="bin/Debug/GraphicsProject" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -16,8 +16,8 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin\Release\GraphicsProject" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Release\" />
+				<Option output="bin/Release/GraphicsProject" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -33,14 +33,35 @@
 			<Add directory="include" />
 		</Compiler>
 		<Linker>
-			<Add library="lib\libgraphics.a" />
-			<Add library="lib\libgraphicsd.a" />
-			<Add library="lib\libsdl_ttf.a" />
-			<Add library="lib\libSDL.dll.a" />
-			<Add library="lib\libSDLmain.a" />
+			<Add library="lib/libgraphics.a" />
+			<Add library="lib/libgraphicsd.a" />
+			<Add library="lib/libsdl_ttf.a" />
+			<Add library="lib/libSDL.dll.a" />
+			<Add library="lib/libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
+		<Unit filename="button.cpp" />
+		<Unit filename="dropdownField.cpp" />
+		<Unit filename="dropdownField.hpp" />
+		<Unit filename="examplecheckbox.cpp" />
+		<Unit filename="examplecheckbox.hpp" />
+		<Unit filename="formWidget.cpp" />
+		<Unit filename="formWidget.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="myWindow.cpp" />
+		<Unit filename="myWindow.hpp" />
+		<Unit filename="numberField.cpp" />
+		<Unit filename="numberField.hpp" />
+		<Unit filename="pushButton.cpp" />
+		<Unit filename="pushButton.hpp" />
+		<Unit filename="sudokuGame.cpp" />
+		<Unit filename="sudokuGame.hpp" />
+		<Unit filename="sudokuNumberField.cpp" />
+		<Unit filename="sudokuNumberField.hpp" />
+		<Unit filename="textField.cpp" />
+		<Unit filename="textField.hpp" />
+		<Unit filename="window.cpp" />
+		<Unit filename="window.hpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

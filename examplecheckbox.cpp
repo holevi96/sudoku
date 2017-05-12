@@ -40,12 +40,3 @@ bool CheckBox::is_checked() const
 {
     return _checked;
 }
-bool CheckBox::isWidgetMouseOver(genv::event ev){
-    if(ev.pos_x >= _px && ev.pos_x <= _px+_sx && ev.pos_y > _py && ev.pos_y <= _py+_sy){
-        isActive = true;
-        return true;
-    }else{
-        isActive = false;
-        return false;
-    }
-}

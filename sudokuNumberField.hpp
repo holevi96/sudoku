@@ -3,11 +3,11 @@
 #include "numberField.hpp"
 class sudokuNumberField : public numberField{
 protected:
-
+    bool isIncorrect=false;
 
     public:
-    sudokuNumberField(Window* w,int px,int py, int sx, int sy, int minimum ,int maximum, int value);
-    void changeValue(int n);
+    sudokuNumberField(Window* w,int px,int py, int sx, int sy, int minimum ,int maximum, int numberFieldValue);
+    void handle(genv::event ev);
     void draw() const;
 };
 

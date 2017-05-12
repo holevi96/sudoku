@@ -9,15 +9,15 @@ class Window; // forward declaration;
 class formWidget{
     protected:
         int _px,_py,_sx,_sy;
-        string currentValue;
+       // string currentValue;
         bool isActive;
+        bool isHovered;
         Window* parent;
     public:
         formWidget(Window* w,int px,int py, int sx, int sy);
-        virtual void handle(genv::event ev) = 0;
-        virtual void draw() const {};
-        virtual bool isWidgetMouseOver(genv::event ev)=0;
-        string getValue();
+        virtual void handle(genv::event ev)=0;
+        virtual void draw() const = 0;
+        virtual bool isMouseOverWidget(genv::event ev);
 };
 
 

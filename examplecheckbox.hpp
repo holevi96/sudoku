@@ -12,7 +12,6 @@ public:
     virtual void draw() const ;
     virtual void handle(genv::event ev);
     virtual bool is_checked() const ;
-      virtual bool isWidgetMouseOver(genv::event ev);
 };
 
 
