@@ -1,20 +1,4 @@
 # depslib dependency file v1.0
-1487193336 source:c:\users\holevi96\desktop\graphicsproject16\graphicsproject\main.cpp
-	"graphics.hpp"
-
-1430018866 c:\users\holevi96\desktop\graphicsproject16\graphicsproject\include\graphics.hpp
-	<string>
-
-1493846401 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\main.cpp
-	"graphics.hpp"
-	"vector"
-	"iostream"
-
-1430022466 c:\users\holevi96\documents\ppke\prog 2\sudoku\include\graphics.hpp
-	<string>
-
-1493717048 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\button.cpp
-
 1494583307 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\dropdownfield.cpp
 	<sstream>
 	"formWidget.hpp"
@@ -62,7 +46,61 @@
 1493892572 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokugame.hpp
 	"vector"
 
-1494592286 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
+1494608796 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.hpp
+	"formWidget.hpp"
+	"window.hpp"
+
+1494583823 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\numberfield.cpp
+	<sstream>
+	"formWidget.hpp"
+	"numberField.hpp"
+	"window.hpp"
+	"graphics.hpp"
+	<cstdlib>
+	<iostream>
+
+1494583816 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\numberfield.hpp
+	"formWidget.hpp"
+	"window.hpp"
+
+1494583863 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\pushbutton.cpp
+	"pushButton.hpp"
+	"formWidget.hpp"
+	"window.hpp"
+	"graphics.hpp"
+
+1494583856 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\pushbutton.hpp
+	"formWidget.hpp"
+	"window.hpp"
+
+1493895864 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokugame.cpp
+	"sudokuGame.hpp"
+	"fstream"
+	"iostream"
+
+1494607310 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.cpp
+	"sudokuNumberField.hpp"
+	"graphics.hpp"
+	"iostream"
+
+1494591889 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.hpp
+	"numberField.hpp"
+
+1494583840 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\textfield.cpp
+	"formWidget.hpp"
+	"graphics.hpp"
+	"textField.hpp"
+
+1494583845 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\textfield.hpp
+	"formWidget.hpp"
+
+1494584063 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.cpp
+	"formWidget.hpp"
+	"window.hpp"
+	"graphics.hpp"
+	"fstream"
+
+1494608884 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
 	"myWindow.hpp"
 	"formWidget.hpp"
 	"pushButton.hpp"
@@ -74,58 +112,4 @@
 	"vector"
 	"fstream"
 	"graphics.hpp"
-
-1494590415 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.hpp
-	"formWidget.hpp"
-	"window.hpp"
-
-1494583856 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\pushbutton.hpp
-	"formWidget.hpp"
-	"window.hpp"
-
-1494583816 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\numberfield.hpp
-	"formWidget.hpp"
-	"window.hpp"
-
-1494583845 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\textfield.hpp
-	"formWidget.hpp"
-
-1494583823 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\numberfield.cpp
-	<sstream>
-	"formWidget.hpp"
-	"numberField.hpp"
-	"window.hpp"
-	"graphics.hpp"
-	<cstdlib>
-	<iostream>
-
-1494583863 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\pushbutton.cpp
-	"pushButton.hpp"
-	"formWidget.hpp"
-	"window.hpp"
-	"graphics.hpp"
-
-1493895864 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokugame.cpp
-	"sudokuGame.hpp"
-	"fstream"
-	"iostream"
-
-1494583840 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\textfield.cpp
-	"formWidget.hpp"
-	"graphics.hpp"
-	"textField.hpp"
-
-1494584063 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.cpp
-	"formWidget.hpp"
-	"window.hpp"
-	"graphics.hpp"
-	"fstream"
-
-1494592092 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.cpp
-	"sudokuNumberField.hpp"
-	"graphics.hpp"
-	"iostream"
-
-1494591889 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.hpp
-	"numberField.hpp"
 

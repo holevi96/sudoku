@@ -53,6 +53,7 @@ void sudokuNumberField::handle(genv::event ev){
     if(ev.keycode == key_pgup && isActive) changeValue(10);
 }
 void sudokuNumberField::changeValue(int n){
+    cout<<row<<" "<<column;
     if(numberFieldValue + n <= maximum && numberFieldValue+n >= minimum) numberFieldValue+=n;
     parent->changeSudokuValue(row,column,numberFieldValue);
 }
