@@ -30,7 +30,7 @@
 1430022466 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\include\graphics.hpp
 	<string>
 
-1494585097 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.hpp
+1494589979 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.hpp
 	"formWidget.hpp"
 	<vector>
 
@@ -62,7 +62,7 @@
 1493892572 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokugame.hpp
 	"vector"
 
-1494586604 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
+1494589926 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
 	"myWindow.hpp"
 	"formWidget.hpp"
 	"pushButton.hpp"
@@ -75,7 +75,7 @@
 	"fstream"
 	"graphics.hpp"
 
-1494586395 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.hpp
+1494587946 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.hpp
 	"formWidget.hpp"
 	"window.hpp"
 
@@ -121,10 +121,11 @@
 	"graphics.hpp"
 	"fstream"
 
-1494584704 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.cpp
+1494588146 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.cpp
 	"sudokuNumberField.hpp"
 	"graphics.hpp"
+	"iostream"
 
-1494582876 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.hpp
+1494587563 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.hpp
 	"numberField.hpp"
 

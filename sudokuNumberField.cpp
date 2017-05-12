@@ -1,10 +1,11 @@
 #include "sudokuNumberField.hpp"
 #include "graphics.hpp"
+#include "iostream"
 using namespace genv;
 using namespace std;
 
-sudokuNumberField::sudokuNumberField(Window* w,int px,int py, int sx, int sy, int minimum ,int maximum, int numberFieldValue):
-    numberField(w,px,py,sx,sy,minimum,maximum,numberFieldValue){
+sudokuNumberField::sudokuNumberField(Window* w,int px,int py, int sx, int sy, int minimum ,int maximum,int row,int column, int numberFieldValue):
+    numberField(w,px,py,sx,sy,minimum,maximum,numberFieldValue), row(row),column(column){
 
 }
 
@@ -44,4 +45,8 @@ void sudokuNumberField::handle(genv::event ev){
     if(ev.keycode == key_down && isActive) changeValue(-1);
     if(ev.keycode == key_pgdn && isActive) changeValue(-10);
     if(ev.keycode == key_pgup && isActive) changeValue(10);
+}
+void sudokuNumberField::changeValue(int n){
+    if(numberFieldValue + n <= maximum && numberFieldValue+n >= minimum) numberFieldValue+=n;
+    parent->changeSudokuValue(row,column,numberFieldValue);
 }

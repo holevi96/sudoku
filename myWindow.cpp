@@ -22,17 +22,20 @@ myWindow::myWindow(int xx, int yy,string filename){
         sudoku[s].resize(9);
         for(int o=0;o<9;o++){
             sfile>> sudoku[s][o];
-            sudokuNumberField *n = new sudokuNumberField(this,s*60+s*10,o*60+o*10,60,60,0,9,sudoku[s][o]);
+            sudokuNumberField *n = new sudokuNumberField(this,s*60+s*10,o*60+o*10,60,60,0,9,s,o,sudoku[s][o]);
             widgets.push_back(n);
         }
     }
 
     event_loop();
 }
- void myWindow::esemeny(string azonosito){
+void myWindow::esemeny(string azonosito){
     if(azonosito == "ACTION"){
 
     }
+}
+void myWindow::changeSudokuValue(int row, int column,int value){
+    sudoku[row][column] = value;
 }
 void myWindow::event_loop(){
 event ev;
