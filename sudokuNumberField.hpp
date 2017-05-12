@@ -10,6 +10,8 @@ protected:
     void handle(genv::event ev);
     virtual void changeValue(int n);
     void draw() const;
+    void setFieldCorrect();
+    void setFieldIncorrect();
 };
 
 #endif // SUDOKUNUMBERFIELD_HPP_INCLUDED

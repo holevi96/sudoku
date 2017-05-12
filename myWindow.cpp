@@ -36,6 +36,20 @@ void myWindow::esemeny(string azonosito){
 }
 void myWindow::changeSudokuValue(int row, int column,int value){
     sudoku[row][column] = value;
+    validateSudoku();
+}
+void myWindow::validateSudoku(){
+
+    for(int s=0;s<9;s++){
+        for(int o=0;o<9;o++){
+                sudokuNumberField* f = static_cast<sudokuNumberField*>(widgets[9*o+s]);
+            if(isValidInColumn(s,o)==false||isValidInRow(s,o)==false || isValidInSub(s,o) == false){
+                f->setFieldCorrect();
+            }else{
+                f->setFieldIncorrect();
+            }
+        }
+    }
 }
 void myWindow::event_loop(){
 event ev;
@@ -58,11 +72,11 @@ event ev;
         for (size_t i=0;i<widgets.size();i++) {
             widgets[i]->draw();
         }
-          gout<<move_to(200,0)<<color(0,0,255)<<box(10,620);
-          gout<<move_to(410,0)<<color(0,0,255)<<box(10,620);
+        gout<<move_to(200,0)<<color(0,0,255)<<box(10,620);
+        gout<<move_to(410,0)<<color(0,0,255)<<box(10,620);
 
-          gout<<move_to(0,200)<<color(0,0,255)<<box(620,10);
-          gout<<move_to(0,410)<<color(0,0,255)<<box(620,10);
+        gout<<move_to(0,200)<<color(0,0,255)<<box(620,10);
+        gout<<move_to(0,410)<<color(0,0,255)<<box(620,10);
 
         /*if(ev.keycode == key_space){
             ofstream kifile("ertekek.txt");
@@ -72,4 +86,33 @@ event ev;
         }*/
         gout << refresh;
     }
+}
+
+bool myWindow::isValidInSub(int x, int y) const{
+    int bx, by;
+    bool valid = true;
+    int elem =sudoku[x][y];
+    //ez megkeresi hogy az adott elem melyik 3x3as subsudokuhoz tartozik, és végigmegy rajta.
+    for (bx = (x/3)*3; bx < (x/3)*3 + 3; bx++) {
+        for (by = (y/3)*3; by < (y/3)*3 + 3; by++) {
+            if(bx!=x && by!=y && sudoku[bx][by] == elem) valid = false;
+        }
+    }
+    return valid;
+}
+bool myWindow::isValidInColumn(int x, int y) const{
+    int elem = sudoku[x][y];
+    bool valid = true;
+    for(int i=0;i<9;i++){
+        if(i!=y && sudoku[x][i] == elem) valid = false;
+    }
+    return valid;
+}
+bool myWindow::isValidInRow(int x,int y) const{
+    int elem = sudoku[x][y];
+    bool valid = true;
+    for(int i=0;i<9;i++){
+        if(i!=x && sudoku[i][y] == elem) valid = false;
+    }
+    return valid;
 }

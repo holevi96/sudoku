@@ -22,7 +22,13 @@ void sudokuNumberField::draw() const{
     }else{
         numberText = getNumberFieldValueString();
     }
-    c<<move_to(15,15)<<color(255,255,255)<<text(numberText);
+    int col;
+    if(isIncorrect){
+        col = 0;
+    }else{
+        col = 255;
+    }
+    c<<move_to(15,15)<<color(255,col,255)<<text(numberText);
     if(isHovered){
         c<<move_to(_sx-30,0)<<box(30,_sy/2)<<move_to(_sx-26,18)<<color(0,0,0)<<line(11,-11)<<line(11,11)<<color(255,255,255);
         c<<move_to(_sx-30,_sy/2)<<box(30,_sy/2)<<move_to(_sx-26,_sy/2+(_sy/2-18))<<color(0,0,0)<<line(11,11)<<line(11,-11);
@@ -49,4 +55,10 @@ void sudokuNumberField::handle(genv::event ev){
 void sudokuNumberField::changeValue(int n){
     if(numberFieldValue + n <= maximum && numberFieldValue+n >= minimum) numberFieldValue+=n;
     parent->changeSudokuValue(row,column,numberFieldValue);
+}
+void sudokuNumberField::setFieldCorrect(){
+    isIncorrect = false;
+}
+void sudokuNumberField::setFieldIncorrect(){
+    isIncorrect = true;
 }
