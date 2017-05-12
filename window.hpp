@@ -12,7 +12,7 @@ class Window{
      int XX, YY;
      vector<formWidget*> widgets;
     public:
-    void event_loop();
+    virtual void event_loop();
     virtual void esemeny(string azonosito) = 0;
 };
 

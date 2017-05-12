@@ -11,7 +11,7 @@ sudokuNumberField::sudokuNumberField(Window* w,int px,int py, int sx, int sy, in
 void sudokuNumberField::draw() const{
     canvas c;
     c.open(_sx, _sy);
-    c.load_font("LiberationSans-Regular.ttf", 15);
+    c.load_font("LiberationSans-Regular.ttf", 20);
 
     c<<color(255,255,255);
     c<<move_to(0,0)<<box(_sx,_sy)<<move_to(2,2)<<color(0,0,0)<<box(_sx-4,_sy-4);

@@ -6,6 +6,7 @@ class myWindow : public Window{
 
     public:
     myWindow(int xx,int yy);
+    virtual void event_loop();
     virtual void esemeny(string azonosito);
 };
 
