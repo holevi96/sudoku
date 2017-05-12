@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
 
-   myWindow App(1000,1000);
+   myWindow App(1000,1000,"sudoku1.txt");
 
     sudokuGame S;
     S.sudoku[0][8] = 5;

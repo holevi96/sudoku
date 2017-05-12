@@ -7,17 +7,22 @@
 #include "textField.hpp"
 #include "iostream"
 #include "vector"
+#include "fstream"
 #include "graphics.hpp"
 using namespace std;
 using namespace genv;
-myWindow::myWindow(int xx, int yy){
+myWindow::myWindow(int xx, int yy,string filename){
     XX = xx;
     YY = yy;
     gout.open(XX,YY);
 
+    ifstream sfile(filename);
+    sudoku.resize(9);
     for(int s=0;s<9;s++){
+        sudoku[s].resize(9);
         for(int o=0;o<9;o++){
-            sudokuNumberField *n = new sudokuNumberField(this,s*60+s*10,o*60+o*10,60,60,0,9,0);
+            sfile>> sudoku[s][o];
+            sudokuNumberField *n = new sudokuNumberField(this,s*60+s*10,o*60+o*10,60,60,0,9,sudoku[s][o]);
             widgets.push_back(n);
         }
     }
