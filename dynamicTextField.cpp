@@ -1,16 +1,16 @@
 #include "formWidget.hpp"
 #include "graphics.hpp"
-#include "textField.hpp"
+#include "dynamicTextField.hpp"
+#include "staticText.hpp"
 using namespace std;
 using namespace genv;
 
-textField::textField(Window *w,int x, int y, int sx, int sy,string t):
-    formWidget(w,x,y,sx,sy)
+dynamicTextField::dynamicTextField(Window *w,int x, int y, int sx, int sy,string t):
+    StaticText(w,x,y,sx,sy,t)
 {
-    textFieldValue = t;
 }
 
-void textField::draw() const
+void dynamicTextField::draw() const
 {
 
     canvas c;
@@ -26,13 +26,19 @@ void textField::draw() const
     c<<move_to(15,15)<<color(255,255,255)<<text(textFieldValue);
     gout << stamp(c, _px, _py);
 }
-void textField::handle(genv::event ev){
+void dynamicTextField::handle(genv::event ev){
 
     if(gout.twidth(textFieldValue) <= _sx-40){
         if(ev.type==ev_key && ev.keycode>31 && ev.keycode<256){
                 textFieldValue+=ev.keycode;
         }
     }
-        if(ev.keycode == key_backspace) textFieldValue = textFieldValue.substr(0, textFieldValue.size()-1);
+        if(ev.keycode == key_backspace){
+            if(textFieldValue.length() != 1){
+                textFieldValue = textFieldValue.substr(0, textFieldValue.size()-1);
+            }else{
+                textFieldValue = " ";
+            }
+        }
 
 }

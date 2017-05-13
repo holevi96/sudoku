@@ -101,16 +101,43 @@
 	"graphics.hpp"
 	"fstream"
 
-1494688519 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
+1494690186 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
 	"myWindow.hpp"
 	"formWidget.hpp"
 	"pushButton.hpp"
 	"numberField.hpp"
+	"checkbox.hpp"
 	"sudokuNumberField.hpp"
-	"dropdownField.hpp"
-	"textField.hpp"
+	"staticText.hpp"
 	"iostream"
 	"vector"
 	"fstream"
 	"graphics.hpp"
+
+1494690194 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\checkbox.cpp
+	"checkbox.hpp"
+	"graphics.hpp"
+
+1494690136 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\checkbox.hpp
+	"graphics.hpp"
+	"formWidget.hpp"
+
+1494690031 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\dynamictextfield.cpp
+	"formWidget.hpp"
+	"graphics.hpp"
+	"dynamicTextField.hpp"
+	"staticText.hpp"
+
+1494689970 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\dynamictextfield.hpp
+	"formWidget.hpp"
+	"staticText.hpp"
+
+1494689891 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\statictext.hpp
+	"graphics.hpp"
+	"formWidget.hpp"
+
+1494690009 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\statictext.cpp
+	"formWidget.hpp"
+	"graphics.hpp"
+	"dynamicTextField.hpp"
 

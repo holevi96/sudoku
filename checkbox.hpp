@@ -2,7 +2,6 @@
 #define EXAMPLECHECKBOX_HPP_INCLUDED
 
 #include "graphics.hpp"
-
 #include "formWidget.hpp"
 class CheckBox : public formWidget {
 protected:

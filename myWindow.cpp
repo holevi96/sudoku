@@ -2,9 +2,9 @@
 #include "formWidget.hpp"
 #include "pushButton.hpp"
 #include "numberField.hpp"
+#include "checkbox.hpp"
 #include "sudokuNumberField.hpp"
-#include "dropdownField.hpp"
-#include "textField.hpp"
+#include "staticText.hpp"
 #include "iostream"
 #include "vector"
 #include "fstream"
@@ -53,13 +53,13 @@ void myWindow::initSudoku(int ID){
 void myWindow::esemeny(string azonosito){
     if(azonosito == "NEXTSUDOKU"){
 
-        //int next = currentSudokuID++;
-        //if(next <= filenames.size()-1){
-            initSudoku(1);
+       currentSudokuID++;
+        if(currentSudokuID <= filenames.size()-1){
+            initSudoku(currentSudokuID);
 
-        //}else{
-        //    gout<<move_to(0,0)<<color(0,0,0)<<box(XX,YY)<<move_to(30,10)<<text("There is no sudokus left...");
-        //}
+        }else{
+            gout<<move_to(0,0)<<color(0,0,0)<<box(XX,YY)<<move_to(30,10)<<text("There is no sudokus left...");
+        }
 
     }
 }

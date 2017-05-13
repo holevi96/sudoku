@@ -1,4 +1,4 @@
-#include "examplecheckbox.hpp"
+#include "checkbox.hpp"
 #include "graphics.hpp"
 using namespace genv;
 
@@ -40,3 +40,4 @@ bool CheckBox::is_checked() const
 {
     return _checked;
 }
+
