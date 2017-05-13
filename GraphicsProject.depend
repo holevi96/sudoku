@@ -46,7 +46,7 @@
 1493892572 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokugame.hpp
 	"vector"
 
-1494608796 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.hpp
+1494680952 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.hpp
 	"formWidget.hpp"
 	"window.hpp"
 
@@ -100,7 +100,7 @@
 	"graphics.hpp"
 	"fstream"
 
-1494608884 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
+1494681173 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
 	"myWindow.hpp"
 	"formWidget.hpp"
 	"pushButton.hpp"

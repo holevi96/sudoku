@@ -22,11 +22,11 @@ myWindow::myWindow(int xx, int yy,string filename) {
         sudoku[i].resize(9);
 
 
-    for(int o=0;o<9;o++){
-        for(int s=0;s<9;s++){
+    for(int s=0;s<9;s++){
+        for(int o=0;o<9;o++){
             sfile>> sudoku[s][o];
-            cout<<sudoku[s][o];
-            sudokuNumberField *n = new sudokuNumberField(this,s*60+s*10,o*60+o*10,60,60,0,9,s,o,sudoku[s][o]);
+           // cout<<sudoku[s][o];
+            sudokuNumberField *n = new sudokuNumberField(this,o*60+o*10,s*60+s*10,60,60,0,9,s,o,sudoku[s][o]);
             widgets.push_back(n);
         }
     }
@@ -40,17 +40,21 @@ void myWindow::esemeny(string azonosito){
 }
 void myWindow::changeSudokuValue(int row, int column,int value){
     sudoku[row][column] = value;
-    validateSudoku(row,column);
+    validateSudoku();
 }
-void myWindow::validateSudoku(int row,int column){
-    //cout<<row<<" "<<column<<"-";
-    sudokuNumberField* f = static_cast<sudokuNumberField*>(widgets[9*column+row]);
-    //cout<<f->getNumberFieldValue();
-    if(isValidInColumn(row,column)==false){
-        f->setFieldIncorrect();
-    }else{
-        f->setFieldCorrect();
+void myWindow::validateSudoku(){
+
+    for(int s=0;s<9;s++){
+        for(int o=0;o<9;o++){
+            sudokuNumberField* f = static_cast<sudokuNumberField*>(widgets[o+9*s]);
+            if(isValidInColumn(s,o)==false || isValidInRow(s,o)==false || isValidInSub(s,o)==false){
+                f->setFieldIncorrect();
+                }else{
+                    f->setFieldCorrect();
+            }
+        }
     }
+
 }
 void myWindow::event_loop(){
 event ev;
@@ -104,24 +108,24 @@ bool myWindow::isValidInSub(int x, int y) const{
 
     return valid;
 }
-bool myWindow::isValidInRow(int x, int y) const{
+bool myWindow::isValidInColumn(int x, int y) const{
     int elem = sudoku[x][y];
-    cout<<elem<<" ";
+    //cout<<elem<<" ";
     bool valid = true;
      if(elem!=0){
     for(int i=0;i<9;i++){
-            cout<<sudoku[i][y];
-        if(i!=x && sudoku[i][y] == elem) valid = false;
+     //   cout<<sudoku[x][i];
+        if(i!=y && sudoku[x][i] == elem) valid = false;
     }
      }
     return valid;
 }
-bool myWindow::isValidInColumn(int x,int y) const{
+bool myWindow::isValidInRow(int x,int y) const{
     int elem = sudoku[x][y];
     bool valid = true;
      if(elem!=0){
     for(int i=0;i<9;i++){
-        if(i!=y && sudoku[x][i] == elem) valid = false;
+        if(i!=x && sudoku[i][y] == elem) valid = false;
     }
      }
     return valid;

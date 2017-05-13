@@ -14,7 +14,7 @@ protected:
     bool isValidInRow(int x, int y) const;
     bool isValidInColumn(int x, int y) const;
     void changeSudokuValue(int row, int column, int value);
-    void validateSudoku(int row, int column);
+    void validateSudoku();
 };
 
 #endif // MYWINDOW_HPP_INCLUDED
