@@ -40,7 +40,6 @@
 			<Add library="lib/libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
-		<Unit filename="button.cpp" />
 		<Unit filename="dropdownField.cpp" />
 		<Unit filename="dropdownField.hpp" />
 		<Unit filename="examplecheckbox.cpp" />

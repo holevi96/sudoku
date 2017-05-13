@@ -14,7 +14,7 @@
 1430022466 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\include\graphics.hpp
 	<string>
 
-1494590356 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.hpp
+1494688191 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.hpp
 	"formWidget.hpp"
 	<vector>
 
@@ -46,8 +46,9 @@
 1493892572 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokugame.hpp
 	"vector"
 
-1494683600 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.hpp
+1494685739 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.hpp
 	"formWidget.hpp"
+	"pushButton.hpp"
 	"window.hpp"
 
 1494681949 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\numberfield.cpp
@@ -94,13 +95,13 @@
 1494583845 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\textfield.hpp
 	"formWidget.hpp"
 
-1494584063 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.cpp
+1494688191 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.cpp
 	"formWidget.hpp"
 	"window.hpp"
 	"graphics.hpp"
 	"fstream"
 
-1494684649 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
+1494688519 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mywindow.cpp
 	"myWindow.hpp"
 	"formWidget.hpp"
 	"pushButton.hpp"

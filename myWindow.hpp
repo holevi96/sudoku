@@ -1,6 +1,7 @@
 #ifndef MYWINDOW_HPP_INCLUDED
 #define MYWINDOW_HPP_INCLUDED
 #include "formWidget.hpp"
+#include "pushButton.hpp"
 #include "window.hpp"
 using namespace std;
 class myWindow : public Window{

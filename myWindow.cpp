@@ -20,36 +20,47 @@ myWindow::myWindow(int xx, int yy,vector<string> f) {
     sudoku.resize(9);
     for(int i=0;i<9;i++)
         sudoku[i].resize(9);
+
+
+    for(int s=0;s<9;s++){
+        for(int o=0;o<9;o++){
+            sudokuNumberField *n = new sudokuNumberField(this,o*60+o*10,s*60+s*10,60,60,0,9,s,o,0);
+            widgets.push_back(n);
+        }
+    }
+    p = new pushButton(this,650,100,150,50,"Next sudoku","NEXTSUDOKU");
+    widgets.push_back(p);
     initSudoku(0);
-    p = new pushButton(this,650,100,150,50,"Next sudoku","NEXTSUDOKU")
     event_loop();
+
 }
 void myWindow::initSudoku(int ID){
 
     ifstream sfile(filenames[ID]);
-    for (int i =0; i< widgets.size();i++)
-   {
-     delete (widgets[i]);
-   }
-   widgets.clear();
-   int a;
     for(int s=0;s<9;s++){
         for(int o=0;o<9;o++){
             sfile>>sudoku[s][o];
-            sudokuNumberField *n = new sudokuNumberField(this,o*60+o*10,s*60+s*10,60,60,0,9,s,o,sudoku[s][o]);
-            widgets.push_back(n);
+           sudokuNumberField* f = static_cast<sudokuNumberField*>(widgets[o+9*s]);
+           f->setValue(sudoku[s][o]);
+           widgets[o+9*s] = f;
         }
     }
     sfile.close();
+    validateSudoku();
 
-    pushButton *p = new pushButton(this,650,100,150,50,"Next sudoku","NEXTSUDOKU");
 
-    widgets.push_back(p);
 }
 void myWindow::esemeny(string azonosito){
     if(azonosito == "NEXTSUDOKU"){
-        int next = currentSudokuID++
-        initSudoku(1);
+
+        //int next = currentSudokuID++;
+        //if(next <= filenames.size()-1){
+            initSudoku(1);
+
+        //}else{
+        //    gout<<move_to(0,0)<<color(0,0,0)<<box(XX,YY)<<move_to(30,10)<<text("There is no sudokus left...");
+        //}
+
     }
 }
 void myWindow::changeSudokuValue(int row, int column,int value){
@@ -106,7 +117,9 @@ event ev;
             }
         }*/
         gout << refresh;
-    }
+        }
+
+
 }
 
 bool myWindow::isValidInSub(int x, int y) const{

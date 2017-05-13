@@ -7,8 +7,7 @@ using namespace genv;
 void Window::event_loop(){
       event ev;
     int focus = -1;
-
-    while(gin >> ev ) {
+        while(gin >> ev ) {
 
         if (ev.type == ev_mouse) {
             for (size_t i=0;i<widgets.size();i++) {
@@ -32,5 +31,8 @@ void Window::event_loop(){
             }
         }*/
         gout << refresh;
-    }
+
 }
+
+}
+
