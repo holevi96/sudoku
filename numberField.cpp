@@ -12,7 +12,7 @@ numberField::numberField(Window* w,int px,int py, int sx, int sy, int mn ,int mx
 {
 
 }
-void numberField::changeValue(int n){
+void numberField::incrementValue(int n){
     if(numberFieldValue + n <= maximum && numberFieldValue+n >= minimum) numberFieldValue+=n;
 }
 bool numberField::isUpClicked(int x, int y,int sx,int sy) const {
@@ -26,14 +26,14 @@ void numberField::handle(genv::event ev){
     int my = ev.pos_y - _py;
     if(ev.button == btn_left){
         if(isUpClicked(mx,my,_sx,_sy)){
-          changeValue(1);
+          incrementValue(1);
         }
-        if(isDownClicked(mx,my,_sx,_sy)) changeValue(-1);
+        if(isDownClicked(mx,my,_sx,_sy)) incrementValue(-1);
     }
-    if(ev.keycode == key_up && isActive) changeValue(1);
-    if(ev.keycode == key_down && isActive) changeValue(-1);
-    if(ev.keycode == key_pgdn && isActive) changeValue(-10);
-    if(ev.keycode == key_pgup && isActive) changeValue(10);
+    if(ev.keycode == key_up && isActive) incrementValue(1);
+    if(ev.keycode == key_down && isActive) incrementValue(-1);
+    if(ev.keycode == key_pgdn && isActive) incrementValue(-10);
+    if(ev.keycode == key_pgup && isActive) incrementValue(10);
 }
 void numberField::draw() const{
 

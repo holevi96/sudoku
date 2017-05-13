@@ -9,13 +9,8 @@ using namespace std;
 
 int main()
 {
-
-   myWindow App(1000,1000,"sudoku1.txt");
-
-    sudokuGame S;
-    S.sudoku[0][8] = 5;
-    S.onChange(0,8);
-
+    vector<string> filenames{"sudoku1.txt","sudoku2.txt"};
+   myWindow App(1000,1000,filenames);
 
     return 0;
 }

@@ -11,50 +11,66 @@
 #include "graphics.hpp"
 using namespace std;
 using namespace genv;
-myWindow::myWindow(int xx, int yy,string filename) {
+myWindow::myWindow(int xx, int yy,vector<string> f) {
     XX = xx;
     YY = yy;
+    filenames = f;
     gout.open(XX,YY);
-
-    ifstream sfile(filename);
+    currentSudokuID = 0;
     sudoku.resize(9);
     for(int i=0;i<9;i++)
         sudoku[i].resize(9);
+    initSudoku(0);
+    p = new pushButton(this,650,100,150,50,"Next sudoku","NEXTSUDOKU")
+    event_loop();
+}
+void myWindow::initSudoku(int ID){
 
-
+    ifstream sfile(filenames[ID]);
+    for (int i =0; i< widgets.size();i++)
+   {
+     delete (widgets[i]);
+   }
+   widgets.clear();
+   int a;
     for(int s=0;s<9;s++){
         for(int o=0;o<9;o++){
-            sfile>> sudoku[s][o];
-           // cout<<sudoku[s][o];
+            sfile>>sudoku[s][o];
             sudokuNumberField *n = new sudokuNumberField(this,o*60+o*10,s*60+s*10,60,60,0,9,s,o,sudoku[s][o]);
             widgets.push_back(n);
         }
     }
+    sfile.close();
 
-    event_loop();
+    pushButton *p = new pushButton(this,650,100,150,50,"Next sudoku","NEXTSUDOKU");
+
+    widgets.push_back(p);
 }
 void myWindow::esemeny(string azonosito){
-    if(azonosito == "ACTION"){
-
+    if(azonosito == "NEXTSUDOKU"){
+        int next = currentSudokuID++
+        initSudoku(1);
     }
 }
 void myWindow::changeSudokuValue(int row, int column,int value){
     sudoku[row][column] = value;
     validateSudoku();
 }
-void myWindow::validateSudoku(){
-
+bool myWindow::validateSudoku(){
+    bool valid = true;
     for(int s=0;s<9;s++){
         for(int o=0;o<9;o++){
+            if(sudoku[s][o]==0) valid == false;
             sudokuNumberField* f = static_cast<sudokuNumberField*>(widgets[o+9*s]);
             if(isValidInColumn(s,o)==false || isValidInRow(s,o)==false || isValidInSub(s,o)==false){
                 f->setFieldIncorrect();
+                valid = false;
                 }else{
                     f->setFieldCorrect();
-            }
+                }
         }
     }
-
+    return valid;
 }
 void myWindow::event_loop(){
 event ev;

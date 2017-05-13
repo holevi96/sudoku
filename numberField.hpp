@@ -9,7 +9,7 @@ protected:
     int numberFieldValue;
     public:
     numberField(Window* w,int px,int py, int sx, int sy, int minimum ,int maximum, int numberFieldValue);
-    virtual void changeValue(int n);
+    virtual void incrementValue(int n);
     virtual void handle(genv::event ev);
     virtual void draw() const;
     virtual bool isUpClicked(int x, int y,int sx,int sy) const;
