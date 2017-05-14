@@ -10,10 +10,10 @@ protected:
     string textFieldValue;
     public:
     StaticText(Window *w,int x, int y, int sx, int sy,string t);
-    void setText(string t);
     virtual void draw() const ;
     virtual void handle(genv::event ev);
     string getText();
+     void setText(string t);
 };
 
 

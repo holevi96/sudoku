@@ -40,10 +40,12 @@
 			<Add library="lib/libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
+		<Unit filename="checkbox.cpp" />
+		<Unit filename="checkbox.hpp" />
 		<Unit filename="dropdownField.cpp" />
 		<Unit filename="dropdownField.hpp" />
-		<Unit filename="examplecheckbox.cpp" />
-		<Unit filename="examplecheckbox.hpp" />
+		<Unit filename="dynamicTextField.cpp" />
+		<Unit filename="dynamicTextField.hpp" />
 		<Unit filename="formWidget.cpp" />
 		<Unit filename="formWidget.hpp" />
 		<Unit filename="main.cpp" />
@@ -53,12 +55,12 @@
 		<Unit filename="numberField.hpp" />
 		<Unit filename="pushButton.cpp" />
 		<Unit filename="pushButton.hpp" />
+		<Unit filename="staticText.cpp" />
+		<Unit filename="staticText.hpp" />
 		<Unit filename="sudokuGame.cpp" />
 		<Unit filename="sudokuGame.hpp" />
 		<Unit filename="sudokuNumberField.cpp" />
 		<Unit filename="sudokuNumberField.hpp" />
-		<Unit filename="textField.cpp" />
-		<Unit filename="textField.hpp" />
 		<Unit filename="window.cpp" />
 		<Unit filename="window.hpp" />
 		<Extensions>
