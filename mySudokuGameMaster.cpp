@@ -11,7 +11,7 @@
 #include "graphics.hpp"
 using namespace std;
 using namespace genv;
-myWindow::myWindow(int xx, int yy,vector<string> f) {
+mySudokuGameMaster::mySudokuGameMaster(int xx, int yy,vector<string> f) {
     XX = xx;
     YY = yy;
     filenames = f;
@@ -36,7 +36,7 @@ myWindow::myWindow(int xx, int yy,vector<string> f) {
     event_loop();
 
 }
-void myWindow::initSudoku(int ID){
+void mySudokuGameMaster::initSudoku(int ID){
 
     ifstream sfile(filenames[ID]);
     for(int s=0;s<9;s++){
@@ -53,7 +53,7 @@ void myWindow::initSudoku(int ID){
 
 
 }
-void myWindow::esemeny(string azonosito){
+void mySudokuGameMaster::esemeny(string azonosito){
     if(azonosito == "NEXTSUDOKU"){
 
        currentSudokuID++;
@@ -67,14 +67,14 @@ void myWindow::esemeny(string azonosito){
 
     }
 }
-void myWindow::changeSudokuValue(int row, int column,int value){
+void mySudokuGameMaster::changeSudokuValue(int row, int column,int value){
     sudoku[row][column] = value;
     if(validateSudoku()){
         p->toggleEditable();
         t->setText("Sudoku is ready! Congrats! Click the button to load next Sudoku.");
     };
 }
-bool myWindow::validateSudoku(){
+bool mySudokuGameMaster::validateSudoku(){
     bool valid = true;
     for(int s=0;s<9;s++){
         for(int o=0;o<9;o++){
@@ -90,16 +90,15 @@ bool myWindow::validateSudoku(){
     }
     return valid;
 }
-void myWindow::event_loop(){
+void mySudokuGameMaster::event_loop(){
 event ev;
     int focus = -1;
 
     while(gin >> ev ) {
-
         if (ev.type == ev_mouse) {
             for (size_t i=0;i<widgets.size();i++) {
                 if (widgets[i]->isMouseOverWidget(ev)) {
-                        focus = i;
+                        if( ev.button == btn_left) focus = i;
                 }
             }
         }
@@ -120,7 +119,7 @@ event ev;
 
 }
 
-bool myWindow::isValidInSub(int x, int y) const{
+bool mySudokuGameMaster::isValidInSub(int x, int y) const{
     int bx, by;
     bool valid = true;
     int elem =sudoku[x][y];
@@ -135,7 +134,7 @@ bool myWindow::isValidInSub(int x, int y) const{
 
     return valid;
 }
-bool myWindow::isValidInColumn(int x, int y) const{
+bool mySudokuGameMaster::isValidInColumn(int x, int y) const{
     int elem = sudoku[x][y];
     bool valid = true;
     if(elem!=0){
@@ -145,7 +144,7 @@ bool myWindow::isValidInColumn(int x, int y) const{
     }
     return valid;
 }
-bool myWindow::isValidInRow(int x,int y) const{
+bool mySudokuGameMaster::isValidInRow(int x,int y) const{
     int elem = sudoku[x][y];
     bool valid = true;
      if(elem!=0){

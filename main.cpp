@@ -2,7 +2,6 @@
 #include "vector"
 #include "iostream"
 #include "fstream"
-#include "sudokuGame.hpp"
 #include "mySudokuGameMaster.hpp"
 using namespace genv;
 using namespace std;

@@ -46,9 +46,7 @@ void sudokuNumberField::handle(genv::event ev){
     }
     if(ev.keycode == key_up && isActive) incrementValue(1);
     if(ev.keycode == key_down && isActive) incrementValue(-1);
-    if(ev.type==ev_key){
-            cout<<ev.keycode;
-    }
+
 }
 void sudokuNumberField::incrementValue(int n){
     if(numberFieldValue + n <= maximum && numberFieldValue+n >= minimum) numberFieldValue+=n;

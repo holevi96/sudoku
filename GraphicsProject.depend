@@ -30,18 +30,17 @@
 	"graphics.hpp"
 	"formWidget.hpp"
 
-1494584192 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\formwidget.cpp
+1494800550 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\formwidget.cpp
 	"graphics.hpp"
 	"formWidget.hpp"
 	"iostream"
 
-1494797153 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\main.cpp
+1494799643 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\main.cpp
 	"graphics.hpp"
 	"vector"
 	"iostream"
 	"fstream"
-	"sudokuGame.hpp"
-	"myWindow.hpp"
+	"mySudokuGameMaster.hpp"
 
 1493892572 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokugame.hpp
 	"vector"
@@ -65,7 +64,7 @@
 	"formWidget.hpp"
 	"window.hpp"
 
-1494798213 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\pushbutton.cpp
+1494799504 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\pushbutton.cpp
 	"pushButton.hpp"
 	"formWidget.hpp"
 	"window.hpp"
@@ -80,7 +79,7 @@
 	"fstream"
 	"iostream"
 
-1494792872 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.cpp
+1494799792 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\sudokunumberfield.cpp
 	"sudokuNumberField.hpp"
 	"graphics.hpp"
 	"iostream"
@@ -96,7 +95,7 @@
 1494583845 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\textfield.hpp
 	"formWidget.hpp"
 
-1494792759 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.cpp
+1494799463 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\window.cpp
 	"formWidget.hpp"
 	"window.hpp"
 	"graphics.hpp"
@@ -137,8 +136,27 @@
 	"graphics.hpp"
 	"formWidget.hpp"
 
-1494794462 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\statictext.cpp
+1494799496 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\statictext.cpp
 	"formWidget.hpp"
 	"graphics.hpp"
 	"dynamicTextField.hpp"
+
+1494799550 c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mysudokugamemaster.hpp
+	"formWidget.hpp"
+	"pushButton.hpp"
+	"staticText.hpp"
+	"window.hpp"
+
+1494800363 source:c:\users\holevi96\documents\ppke\prog 2\sudoku\sudoku\mysudokugamemaster.cpp
+	"mySudokuGameMaster.hpp"
+	"formWidget.hpp"
+	"pushButton.hpp"
+	"numberField.hpp"
+	"checkbox.hpp"
+	"sudokuNumberField.hpp"
+	"staticText.hpp"
+	"iostream"
+	"vector"
+	"fstream"
+	"graphics.hpp"
 
