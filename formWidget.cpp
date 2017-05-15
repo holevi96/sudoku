@@ -25,8 +25,8 @@ bool formWidget::isMouseOverWidget(genv::event ev){
         isActive = active;
         return isActive;
     }
- /*   if(ev.type == ev_mouse){
+   if(ev.type == ev_mouse){
         isHovered = active;
-    }*/
+    }
 
 }
